@@ -39,9 +39,9 @@ class MyClass(object):
             getLogger().error('{} is too high for {}'.format(value, self._limit))
             raise ValueError('Cannot compute fibonacci number above limit')
         else:
-            return self._fibonacciImplementation(value)
+            return self._fibonacci_implementation(value)
 
-    def _fibonacciImplementation(self, value):
+    def _fibonacci_implementation(self, value):
         '''
         protected recursive implementation of the fibonacci number which doesn't perform any checks
         '''
@@ -50,4 +50,4 @@ class MyClass(object):
         if value < 2:
             getLogger().debug('reached end of recursion')
             return value
-        return self._fibonacciImplementation(value - 2) + self._fibonacciImplementation(value - 1)
+        return self._fibonacci_implementation(value - 2) + self._fibonacci_implementation(value - 1)
