@@ -16,9 +16,9 @@ Even though most projects start off as a bunch of experimental scripts, as soon 
 2. Put your module under GIT version control [https://www.atlassian.com/git/tutorials/](https://www.atlassian.com/git/tutorials/) and make it available via http://github.com
     * Commit early and commit often: use small atomic commits.
     * How to write git commit messages: basically complete the sentence "When I apply this commit, I ... to ...". [http://chris.beams.io/posts/git-commit/](http://chris.beams.io/posts/git-commit/)
-    * Use the github issue system, and refer to issues in your commit messages (“fixes #42”)
+    * For projects with more developers (and/or users), use the github issue system, and refer to issues in your commit messages (“fixes #42”). You can also use these issues as your roadmap of things to be done.
     * Workflow aka branching model: [https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
-     In a nutshell: Have one master branch, develop features in short-lived feature-branches, create a pull request to merge them back into master once finished, delete the feature branch after it is merged. Releases are tagged commits in your master branch.
+     In a nutshell: Have one master branch, develop features in short-lived feature-branches, create a pull request to merge them back into master once finished (using `git merge --no-ff` is one [option](http://stackoverflow.com/questions/18126297/when-to-use-the-no-ff-merge-option-in-git)), delete the feature branch after it is merged. Releases are tagged commits in your master branch.
 3. Write tests (we mostly use nosetests):
     * Put them in a “tests” subfolder
     * Run the tests before every commit!
