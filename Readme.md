@@ -33,7 +33,11 @@ Even though most projects start off as a bunch of experimental scripts, as soon 
      * Variable and method names all `lowercase_with_underscores`
      * Protected members start with an `_underscore`.
      * Files (especially those in modules) start lowercase, then all lowercase or camelCase, without spaces, dashes, underscores, whatsoever (otherwise the import statement looks ugly, it even forbids most special characters).
-    * If possible, avoid namespace pollution by not using `from bigandlengthyfilename import *`. If the filename has to be, well, big and lengthy, consider using `import bigandlengthyfilename as blf`. Choose your three (or two) characters (e.g. `blf`) wisely. 
+    * If possible, avoid namespace pollution by not using `from bigandlengthyfilename import *`. If the filename has to be, well, big and lengthy, consider using `import bigandlengthyfilename as blf`. Choose your three (or two) characters (e.g. `blf`) wisely.
+    * If you are working with Python 2.7 (which most of us do), it might make sense to be prepared for the change to Python 3. For that, use the imports from **future**:
+     ```
+     from future import division, absolute_import, unicode_literals, print_function
+     ``` 
 1. _Module Structure:_
     * _See [http://docs.python-guide.org/en/latest/writing/structure/](http://docs.python-guide.org/en/latest/writing/structure/)_
     * _Every folder that contains an `__init__.py` can be imported by Python_
